@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Resume Snippets",
+  "version": "1.0",
+  "description": "Save copyable sections of your resume to fill out forms easily.",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png",
+    "default_title": "Resume Snippets"
+  },
+  "icons": {
+    "16": "logo.png",
+    "18": "pencil.png",
+    "20": "remove.png",
+    "22": "copy.png",
+    "24": "header.png",
+    "26": "add.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

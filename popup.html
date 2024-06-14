@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div class="dark-mode-toggle">
+        <label class="custom-file-upload">
+            <span>Toggle Mode</span>
+            <input id="darkModeToggle" hidden>
+        </label>
+    </div>
+    <title>Resume Snippets</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <div class="headerContainer">
+        <img src="./header.png" class="header" width="150" height="150" />
+    </div>
+    <form id="snippetForm">
+        <input type="text" id="snippetTitle" placeholder="Title" required>
+        <input autocomplete="off" id="snippetCategory" list="snippetCategoryList" placeholder="Select category">
+        <datalist id="snippetCategoryList" required>
+            <option value="Work Experience">Work Experience</option>
+            <option value="Education">Education</option>
+            <option value="Skills">Skills</option>
+            <option value="Projects">Projects</option>
+            <option value="Certifications">Certifications</option>
+            <option value="SocialLink">Social Link</option>
+            <option value="PersonalInfo">Personal Information</option>
+        </datalist>
+        <textarea id="snippetContent" placeholder="Content" required></textarea>
+        <label class="custom-file-upload">
+            <input type="submit" hidden>
+            <span>Add</span>
+        </label>
+    </form>
+    <input type="text" id="searchBar" placeholder="Search snippets...">
+    
+    <div class="tabs">
+        <div class="tab active" data-category="all">A</div>
+        <div class="tab" data-category="Work Experience">WE</div>
+        <div class="tab" data-category="Education">ED</div>
+        <div class="tab" data-category="Skills">Sk</div>
+        <div class="tab" data-category="Projects">PR</div>
+        <div class="tab" data-category="Certifications">CE</div>
+        <div class="tab" data-category="SocialLink">SL</div>
+        <div class="tab" data-category="PersonalInfo">PI</div>
+    </div>
+    
+    <div id="snippets"></div>
+    
+    <div class="fileControls">
+        <label for="exportButton" class="custom-file-upload">
+            <span>Export</span> <input id="exportButton" hidden>
+        </label>
+        <label for="importButton" class="custom-file-upload">
+            <span>Import</span> <input type="file" id="importButton" hidden>
+        </label>
+    </div>    
+    <script src="popup.js"></script>
+</body>
+</html>
